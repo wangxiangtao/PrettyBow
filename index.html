@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>PrettyBow by wangxiangtao</title>
+    <title>Prettymatch by wangxiangtao</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -28,9 +28,9 @@
 
 
         <ul>
-          <li><a href="https://github.com/wangxiangtao/PrettyBow/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/wangxiangtao/PrettyBow/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/wangxiangtao/PrettyBow">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyMatch/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyMatch/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyMatch">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
@@ -38,6 +38,107 @@
 It contains many algorithms to calculate morphological, semantic and sounds-like distances for measurement of string similarity. 
 Using an supervised Random Forest algorithm to combine and learn features from all comparators for matching, PrettyMatch can handle noisy data with good accuracy.</p>
 
+<h2>
+<a id="basic-algorithms" class="anchor" href="#basic-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic algorithms</h2>
+
+<p>Useful for approximate string matching and measurement of string distance. All metrics calculate the similarity of two strings as a double with a value between 0 and 1. A value of 0 being completely different and a value of 1 being completely similar.</p>
+
+<ul>
+<li>
+<strong><a href="http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/">FuzzyWuzzy</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Dice%27s_coefficient">Dice / Sorensen</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Jaccard_index">Jaccard</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Jaro-Winkler_distance">Jaro-Winkler</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Word-level Levenshtein</a></strong> </li>
+<li><strong><a href="http://en.wikipedia.org/wiki/N-gram">N-Gram</a></strong></li>
+<li><strong><a href="http://en.wikipedia.org/wiki/N-gram">Word-level N-Gram</a></strong></li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Overlap_coefficient">Overlap</a></strong> </li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/Soundex">Soundex</a></strong> </li>
+<li><strong><a href="https://code.google.com/p/word2vec/">Deep Learning-Word2Vec</a></strong></li>
+<li>
+<strong><a href="http://en.wikipedia.org/wiki/MinHash">MinHash</a></strong> </li>
+</ul>
+
+<div class="highlight highlight-scala"><pre><span class="pl-en">StringMetric</span>.compareWithJaccard(<span class="pl-c1">1</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.6875</span>
+<span class="pl-en">StringMetric</span>.compareWithJaro(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)             <span class="pl-c">//0.7863</span>
+<span class="pl-en">StringMetric</span>.compareWithJaroWinkler(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)      <span class="pl-c">//0.8504</span>
+<span class="pl-en">StringMetric</span>.compareWithNGramLetter(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)   <span class="pl-c">//0.6923</span>
+<span class="pl-en">StringMetric</span>.compareWithNGramWord(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)     <span class="pl-c">//0.3333</span>
+<span class="pl-en">StringMetric</span>.compareWithOverlap(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.7500</span>
+<span class="pl-en">StringMetric</span>.compareWithLevenshtein(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)      <span class="pl-c">//0.7857</span>
+<span class="pl-en">StringMetric</span>.compareWithFuzzyWuzzy(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.7900</span>
+<span class="pl-en">StringMetric</span>.compareWithSoundex(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)          <span class="pl-c">//0.7000</span>
+<span class="pl-en">StringMetric</span>.compareWithWordLevenshtein(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)  <span class="pl-c">//0.5000</span>
+<span class="pl-en">StringMetric</span>.compareWithWord2vec(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)         <span class="pl-c">//0.5920</span>
+<span class="pl-en">StringMetric</span>.compareWithMinHash(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)          <span class="pl-c">//0.3333</span></pre></div>
+
+<p>You possibly need to add new comparators by easliy extend StringMetric class and implement the compare() method </p>
+
+<h2>
+<a id="advanced-algorithms" class="anchor" href="#advanced-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced algorithms</h2>
+
+<p>Advanced algorithms can automatically clean and match strings without any customized code and config. it contains </p>
+
+<ul>
+<li>
+<strong>Supervised Cleaner</strong>  based on training data, it automatically identify and remove redundant tokens<br>
+</li>
+<li>
+<strong>Supervised Matcher</strong>  learn from all the metrics using random forest and properly combine all metrics to build a classifier for matching.  the random forest is automatically optimized by grid search the proper num of trees. </li>
+</ul>
+
+<p>The pipeline are shown as below</p>
+
+<p><img src="https://raw.githubusercontent.com/wangxiangtao/prettymatch/master/pipe.png" alt="alt tag"></p>
+<p>You can easily add other cleaners by extend Clearner class and implement the clean() method </p>
+<p>To train a comprehensive model by learning from all the matrics by Random Forest , you just need to run :</p>
+
+<div class="highlight highlight-scala"><pre><span class="pl-k">val</span> <span class="pl-en">PrettyMatch</span>  <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">PrettyMatch</span> 
+<span class="pl-en">PrettyMatch</span>.run(trainingdata,<span class="pl-c1">true</span>) 
+</div>
+<p>It will generate trained model for comparison and print Confusion Matric by 10 cross validation.</p>
+
+<h2>
+<a id="example--company-name-matching" class="anchor" href="#example--company-name-matching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example : company name matching</h2>
+
+<p>There are <a href="https://docs.google.com/a/crayondata.com/spreadsheets/d/1uOLMlOIxWef_ixbc5v_O-pbeOjA2VYBs5IuACcByiTE/edit#gid=1977845281">5000 pairs of comany names</a> which contain 3000 matched names and 2000 similiar(unmatched) names</p>
+
+<p>Using it as training data, we run the Random Forest algorithm and get result of confusion matric below. </p>
+
+<table class="tg">
+  <tr>
+    <td class="tg-031e">True Predicted</td>
+    <td class="tg-031e">False Predicted</td>
+    <td class="tg-031e">Precision</td>
+    <td class="tg-031e">Recall</td>
+    <td class="tg-031e">F-Score</td>
+    <td class="tg-031e">Class</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">1792.0</td>
+    <td class="tg-031e">237.0</td>
+    <td class="tg-031e">0.905</td>
+    <td class="tg-031e">0.883</td>
+    <td class="tg-031e">0.894</td>
+    <td class="tg-031e">match</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">2853.0</td>
+    <td class="tg-031e">189.0</td>
+    <td class="tg-031e">0.923</td>
+    <td class="tg-031e">0.938</td>
+    <td class="tg-031e">0.931</td>
+    <td class="tg-031e">unmatch</td>
+  </tr>
+</table>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
