@@ -67,21 +67,6 @@ Using an supervised Random Forest algorithm to combine and learn features from a
 <strong><a href="http://en.wikipedia.org/wiki/MinHash">MinHash</a></strong> </li>
 </ul>
 
-<div class="highlight highlight-scala"><pre><span class="pl-en">StringMetric</span>.compareWithJaccard(<span class="pl-c1">1</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.6875</span>
-<span class="pl-en">StringMetric</span>.compareWithJaro(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)             <span class="pl-c">//0.7863</span>
-<span class="pl-en">StringMetric</span>.compareWithJaroWinkler(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)      <span class="pl-c">//0.8504</span>
-<span class="pl-en">StringMetric</span>.compareWithNGramLetter(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)   <span class="pl-c">//0.6923</span>
-<span class="pl-en">StringMetric</span>.compareWithNGramWord(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)     <span class="pl-c">//0.3333</span>
-<span class="pl-en">StringMetric</span>.compareWithOverlap(<span class="pl-c1">2</span>)(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.7500</span>
-<span class="pl-en">StringMetric</span>.compareWithLevenshtein(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)      <span class="pl-c">//0.7857</span>
-<span class="pl-en">StringMetric</span>.compareWithFuzzyWuzzy(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)       <span class="pl-c">//0.7900</span>
-<span class="pl-en">StringMetric</span>.compareWithSoundex(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)          <span class="pl-c">//0.7000</span>
-<span class="pl-en">StringMetric</span>.compareWithWordLevenshtein(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)  <span class="pl-c">//0.5000</span>
-<span class="pl-en">StringMetric</span>.compareWithWord2vec(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)         <span class="pl-c">//0.5920</span>
-<span class="pl-en">StringMetric</span>.compareWithMinHash(<span class="pl-s1"><span class="pl-pds">"</span>google crayon<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>goodbye crayon<span class="pl-pds">"</span></span>)          <span class="pl-c">//0.3333</span></pre></div>
-
-<p>You possibly need to add new comparators by easliy extend StringMetric class and implement the compare() method </p>
-
 <h2>
 <a id="advanced-algorithms" class="anchor" href="#advanced-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced algorithms</h2>
 
@@ -112,33 +97,6 @@ Using an supervised Random Forest algorithm to combine and learn features from a
 <p>There are <a href="https://docs.google.com/a/crayondata.com/spreadsheets/d/1uOLMlOIxWef_ixbc5v_O-pbeOjA2VYBs5IuACcByiTE/edit#gid=1977845281">5000 pairs of comany names</a> which contain 3000 matched names and 2000 similiar(unmatched) names</p>
 
 <p>Using it as training data, we run the Random Forest algorithm and get result of confusion matric below. </p>
-
-<table class="tg">
-  <tr>
-    <td class="tg-031e">True Predicted</td>
-    <td class="tg-031e">False Predicted</td>
-    <td class="tg-031e">Precision</td>
-    <td class="tg-031e">Recall</td>
-    <td class="tg-031e">F-Score</td>
-    <td class="tg-031e">Class</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">1792.0</td>
-    <td class="tg-031e">237.0</td>
-    <td class="tg-031e">0.905</td>
-    <td class="tg-031e">0.883</td>
-    <td class="tg-031e">0.894</td>
-    <td class="tg-031e">match</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">2853.0</td>
-    <td class="tg-031e">189.0</td>
-    <td class="tg-031e">0.923</td>
-    <td class="tg-031e">0.938</td>
-    <td class="tg-031e">0.931</td>
-    <td class="tg-031e">unmatch</td>
-  </tr>
-</table>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
