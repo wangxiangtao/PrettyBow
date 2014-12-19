@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/scala-2.11/classes" path="src/main/scala"/>
+	<classpathentry kind="src" output="target/scala-2.11/classes" path="src/main/java"/>
+	<classpathentry kind="src" output="target/scala-2.11/test-classes" path="src/test/scala"/>
+	<classpathentry kind="src" output="target/scala-2.11/test-classes" path="src/test/java"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.24.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.lucene/lucene-core/jars/lucene-core-4.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.lucene/lucene-analyzers-common/jars/lucene-analyzers-common-4.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.lucene/lucene-queryparser/jars/lucene-queryparser-4.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.lucene/lucene-queries/jars/lucene-queries-4.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.lucene/lucene-sandbox/jars/lucene-sandbox-4.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/junit/junit/jars/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.jsoup/jsoup/jars/jsoup-1.7.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-server/jars/selenium-server-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.bouncycastle/bcprov-jdk15on/jars/bcprov-jdk15on-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.bouncycastle/bcpkix-jdk15on/jars/bcpkix-jdk15on-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/mx4j/mx4j-tools/jars/mx4j-tools-3.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.mortbay.jetty/servlet-api-2.5/jars/servlet-api-2.5-6.1.9.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/jetty-repacked/jars/jetty-repacked-7.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.jcip/jcip-annotations/jars/jcip-annotations-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-java/jars/selenium-java-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-chrome-driver/jars/selenium-chrome-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-remote-driver/jars/selenium-remote-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/cglib/cglib-nodep/jars/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.json/json/jars/json-20080701.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-api/jars/selenium-api-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/com.google.guava/guava/bundles/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/commons-logging/commons-logging/jars/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/commons-codec/commons-codec/jars/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.commons/commons-exec/jars/commons-exec-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.java.dev.jna/jna/jars/jna-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.java.dev.jna/platform/jars/platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-htmlunit-driver/jars/selenium-htmlunit-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.sourceforge.htmlunit/htmlunit/jars/htmlunit-2.14.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/xalan/xalan/jars/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/xalan/serializer/jars/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.sourceforge.htmlunit/htmlunit-core-js/jars/htmlunit-core-js-2.14.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.20.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.sourceforge.cssparser/cssparser/jars/cssparser-0.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.w3c.css/sac/jars/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/commons-io/commons-io/jars/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.eclipse.jetty/jetty-websocket/jars/jetty-websocket-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-firefox-driver/jars/selenium-firefox-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-ie-driver/jars/selenium-ie-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-safari-driver/jars/selenium-safari-driver-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.webbitserver/webbit/jars/webbit-0.4.14.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/io.netty/netty/bundles/netty-3.5.2.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.seleniumhq.selenium/selenium-support/jars/selenium-support-2.42.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.yaml/snakeyaml/jars/snakeyaml-1.8.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/nz.ac.waikato.cms.weka/weka-dev/jars/weka-dev-3.7.11.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/net.sf.squirrel-sql.thirdparty-non-maven/java-cup/jars/java-cup-0.11a.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/org.pentaho.pentaho-commons/pentaho-package-manager/jars/pentaho-package-manager-1.0.8.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/edu.stanford.nlp/stanford-corenlp/jars/stanford-corenlp-3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/edu.stanford.nlp/stanford-corenlp/jars/stanford-corenlp-3.4-models.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/com.io7m.xom/xom/jars/xom-1.2.10.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/joda-time/joda-time/jars/joda-time-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/de.jollyday/jollyday/jars/jollyday-0.4.7.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/com.googlecode.efficient-java-matrix-library/ejml/jars/ejml-0.23.jar"/>
+	<classpathentry kind="lib" path="D:/Dropbox/sbt/cache/javax.json/javax.json-api/bundles/javax.json-api-1.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
