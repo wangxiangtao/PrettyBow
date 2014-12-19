@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Prettymatch by wangxiangtao</title>
+    <title>PrettyBow by wangxiangtao</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -13,87 +13,91 @@
     <![endif]-->
   </head>
   <body>
-     <div id="nav">
+   <div id="nav">
         <p class="remove-bottom">PrettyBow  <img src="https://raw.githubusercontent.com/wangxiangtao/PrettyMatch/master/dragonfly.png" style="height: 1.7em; vertical-align: -0.2em">
-                  
         </p>
     </div>
-    <div class="shadow">
-  </div>
+    <div class="shadow"> </div>
     <div class="wrapper">
       <header>
-        <h1>PrettyBow         <img src="https://raw.githubusercontent.com/wangxiangtao/PrettyMatch/master/dragonfly.png" style="height: 1em; vertical-align: -0.1em">
-       </h1>
+        <h1>PrettyBow<img src="https://raw.githubusercontent.com/wangxiangtao/PrettyMatch/master/dragonfly.png" style="height: 1em; vertical-align: -0.1em"></h1>
         <p></p>
 
-
         <ul>
-          <li><a href="https://github.com/wangxiangtao/PrettyMatch/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/wangxiangtao/PrettyMatch/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/wangxiangtao/PrettyMatch">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyBow/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyBow/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wangxiangtao/PrettyBow">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <p>PrettyMatch is a String Matching library written in Scala. 
-It contains many algorithms to calculate morphological, semantic and sounds-like distances for measurement of string similarity. 
-Using an supervised Random Forest algorithm to combine and learn features from all comparators for matching, PrettyMatch can handle noisy data with good accuracy.</p>
+     
+<p>About the library</p>
 
-<h2>
-<a id="basic-algorithms" class="anchor" href="#basic-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic algorithms</h2>
+<p>The library provides facilities for:</p>
 
-<p>Useful for approximate string matching and measurement of string distance. All metrics calculate the similarity of two strings as a double with a value between 0 and 1. A value of 0 being completely different and a value of 1 being completely similar.</p>
+<p>Recursively descending directories, finding text files.
+Finding `document' boundaries when there are multiple documents per file.
+Tokenizing a text file, according to several different methods.
+Including N-grams among the tokens.
+Mapping strings to integers and back again, very efficiently.
+Building a sparse matrix of document/token counts.
+Pruning vocabulary by word counts or by information gain.
+Building and manipulating word vectors.
+Setting word vector weights according to Naive Bayes, TFIDF, and several other methods.
+Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.
+Scoring queries for retrieval or classification.
+Writing all data structures to disk in a compact format.
+Reading the document/token matrix from disk in an efficient, sparse fashion.
+Performing test/train splits, and automatic classification tests.
+Operating in server mode, receiving and answering queries over a socket.</p>
 
-<h2>
-<a id="advanced-algorithms" class="anchor" href="#advanced-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced algorithms</h2>
+<p>Recursively descending directories, finding text files.
+Finding `document' boundaries when there are multiple documents per file.
+Tokenizing a text file, according to several different methods.
+Including N-grams among the tokens.
+Mapping strings to integers and back again, very efficiently.
+Building a sparse matrix of document/token counts.
+Pruning vocabulary by word counts or by information gain.
+Building and manipulating word vectors.
+Setting word vector weights according to Naive Bayes, TFIDF, and several other methods.
+Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.
+Scoring queries for retrieval or classification.
+Writing all data structures to disk in a compact format.
+Reading the document/token matrix from disk in an efficient, sparse fashion.
+Performing test/train splits, and automatic classification tests.
+Operating in server mode, receiving and answering queries over a socket.</p>
 
-<p>Advanced algorithms can automatically clean and match strings without any customized code and config. it contains </p>
+<p>Recursively descending directories, finding text files.
+Finding `document' boundaries when there are multiple documents per file.
+Tokenizing a text file, according to several different methods.
+Including N-grams among the tokens.
+Mapping strings to integers and back again, very efficiently.
+Building a sparse matrix of document/token counts.
+Pruning vocabulary by word counts or by information gain.
+Building and manipulating word vectors.
+Setting word vector weights according to Naive Bayes, TFIDF, and several other methods.
+Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.
+Scoring queries for retrieval or classification.
+Writing all data structures to disk in a compact format.
+Reading the document/token matrix from disk in an efficient, sparse fashion.
+Performing test/train splits, and automatic classification tests.
+Operating in server mode, receiving and answering queries over a socket.</p>
 
-<ul>
-<li>
-<strong>Supervised Cleaner</strong>  based on training data, it automatically identify and remove redundant tokens<br>
-</li>
-<li>
-<strong>Supervised Matcher</strong>  learn from all the metrics using random forest and properly combine all metrics to build a classifier for matching.  the random forest is automatically optimized by grid search the proper num of trees. </li>
-</ul>
-
-
-<div class="highlight highlight-scala"><pre><span class="pl-k">val</span> <span class="pl-en">PrettyMatch</span>  <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">PrettyMatch</span> 
-<span class="pl-en">PrettyMatch</span>.run(trainingdata,<span class="pl-c1">true</span>) 
-</div>
-<p>It will generate trained model for comparison and print Confusion Matric by 10 cross validation.</p>
-
-<h2>
-<a id="example--company-name-matching" class="anchor" href="#example--company-name-matching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example : company name matching</h2>
-
-<p>There are <a href="https://docs.google.com/a/crayondata.com/spreadsheets/d/1uOLMlOIxWef_ixbc5v_O-pbeOjA2VYBs5IuACcByiTE/edit#gid=1977845281">5000 pairs of comany names</a> which contain 3000 matched names and 2000 similiar(unmatched) names</p>
-
-<p>Using it as training data, we run the Random Forest algorithm and get result of confusion matric below. </p>
-
-<h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
-<pre><code>The MIT License (MIT)
-
-Copyright (c) 2014 Xiangtao Wang
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-</code></pre>
-    
+<p>Recursively descending directories, finding text files.
+Finding `document' boundaries when there are multiple documents per file.
+Tokenizing a text file, according to several different methods.
+Including N-grams among the tokens.
+Mapping strings to integers and back again, very efficiently.
+Building a sparse matrix of document/token counts.
+Pruning vocabulary by word counts or by information gain.
+Building and manipulating word vectors.
+Setting word vector weights according to Naive Bayes, TFIDF, and several other methods.
+Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.
+Scoring queries for retrieval or classification.
+Writing all data structures to disk in a compact format.
+Reading the document/token matrix from disk in an efficient, sparse fashion.
+Performing test/train splits, and automatic classification tests.
+Operating in server mode, receiving and answering queries over a socket.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/wangxiangtao">wangxiangtao</a></p>
