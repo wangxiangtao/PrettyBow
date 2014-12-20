@@ -47,10 +47,12 @@ The idea of PrettyBow is inspired by <a href="http://www.cs.cmu.edu/~mccallum/bo
 <li>Setting word vector weights according to Binary, TF, TFIDF.</li>
 <li>Smoothing word probabilities according to Laplace (Dirichlet uniform).</li>
 <li>Pruning vocabulary(feature selection) by word frequency or information gain or SVM-weight.</li>
-<li>Building incremental bag of word model/vector space model.</li>
-<li>Writing all data structures to disk in a compact format.</li>
-<li>Reading the document/token matrix from disk in an efficient, sparse fashion.</li>
-<li>Performing test/train splits, and automatic classification tests.</li>
+<li>Building incremental bag of word(BOW)/vector space model(VSM).</li>
+<li>Writing all prepared data/feature to disk in a compact format</li>
+<li>Supporting two data formats: ARFF for weka and generic BOW/VSM feature table.</li>
+<li>Reading the data/feature from disk in an efficient, sparse fashion.</li>
+<li>Learning classifier by Naive Bayes, SVM, Decision Tree on the top of pre-prepared BOW/VSM through Weka.</li>
+<li>Performing test/train splits and cross valuation.</li>
   
 </ul>
 <h2>
