@@ -56,9 +56,25 @@ The idea of PrettyBow is inspired by <a href="http://www.cs.cmu.edu/~mccallum/bo
   
 </ul>
 
-<p>Usage</p>
+<h2>Usage</h2>
+<p> Example: create a BOW/VSM using 
+    1, Setting word vector weights by TFIDF
+    2, minimum word frequency > 5
+    3, minimum of n-gram = 1
+    4, maxnium of n-gram = 3
+    5, enable lemmatization
+    6, disable stemming
+    7, removing normal english stop words
+</p>
 <div class="highlight highlight-scala"><pre>
-BOW.config(BOW.AllFeatureModels._1, 5, 1, 2, true, false)
+BOW.config("TFIDF", 5, 1, 3, true, false, true) // the order of parameters correspond to above sequence
+BOW.addIndex(id, text, false) //  add id of document and content of document  
+BOW.commitIndex  // index all documents which we added above
+BuildArff.buildSparseArff("path to save BOW as training data")  // build BOW/VSM and write to disk by ARFF format 
+val trainer = new TrainingModel("path of training file", "path to save model")
+trainer.currentModel = "SVM"  // training by SVM
+val model = trainer.training  // performing training process
+trainer.saveModel(model)      // save the model to disk
 </pre> </div>
 
 
