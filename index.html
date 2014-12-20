@@ -78,7 +78,7 @@ BuildArff.buildSparseArff("path to save BOW as training data")  // build BOW/VSM
 </p>
 <div class="highlight highlight-scala"><pre>
 val trainer = new TrainingModel("path of training file", "path to save model")
-trainer.currentModel = "SVM"  // training by SVM
+trainer.currentModel = "SVM"  // train by SVM
 val model = trainer.training  // performing training process
 trainer.saveModel(model)      // save the model to disk
 trainer.evaluate              // print confusion matrix
