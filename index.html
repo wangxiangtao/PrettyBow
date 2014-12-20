@@ -81,8 +81,15 @@ val trainer = new TrainingModel("path of training file", "path to save model")
 trainer.currentModel = "SVM"  // training by SVM
 val model = trainer.training  // performing training process
 trainer.saveModel(model)      // save the model to disk
+trainer.evaluate              // print confusion matrix
 </pre> </div>
-
+<p> 3, Predicting new text
+</p>
+<div class="highlight highlight-scala"><pre>
+ val trainer = new TrainingModel(modelPath = "path of pre-trained model")
+ val result = trainer.predict("new text")
+ println(result)
+</pre> </div>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
