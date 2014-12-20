@@ -34,23 +34,24 @@
      
 <p>PrettyBow is a library of Scala for Statistical Language Modeling, Text Retrieval and Classification.  It is built on the top 
 of Lucene and Weka. 
-The idea of PrettyBow is inspired by <a href="http://www.cs.cmu.edu/~mccallum/bow/">Bow (a library written in C)</a> and <a href='http://www.cs.cmu.edu/~cprose/TagHelper.html'>TagHelper (a library written in Java)</a></p>
+The idea of PrettyBow is inspired by <a href="http://www.cs.cmu.edu/~mccallum/bow/">Bow (similar library written in C)</a> and <a href='http://www.cs.cmu.edu/~cprose/TagHelper.html'>TagHelper (similar library written in Java)</a></p>
+It is fast , feature abundant and  highly configurable.
 
-<p>Recursively descending directories, finding text files.
-Finding `document' boundaries when there are multiple documents per file.
-Tokenizing a text file, according to several different methods.
-Including N-grams among the tokens.
-Mapping strings to integers and back again, very efficiently.
-Building a sparse matrix of document/token counts.
-Pruning vocabulary by word counts or by information gain.
-Building and manipulating word vectors.
-Setting word vector weights according to Naive Bayes, TFIDF, and several other methods.
-Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.
-Scoring queries for retrieval or classification.
-Writing all data structures to disk in a compact format.
-Reading the document/token matrix from disk in an efficient, sparse fashion.
-Performing test/train splits, and automatic classification tests.
-Operating in server mode, receiving and answering queries over a socket.</p>
+<p>The library provides facilities for:</p>
+<p>
+<ul>
+<li>Tokenizing a text file, according to several different methods.</li>
+<li>Including N-grams among the tokens.</li>
+<li>Removing stop words.</li>
+<li>Building bag of word model/vector space model.</li>
+<li>Pruning vocabulary by word frequency or information gain or SVM-weight.</li>
+<li>Setting word vector weights according to Binary, TF, TFIDF.</li>
+<li>Smoothing word probabilities according to Laplace (Dirichlet uniform), M-estimates, Witten-Bell, and Good-Turning.</li>
+<li>Writing all data structures to disk in a compact format.</li>
+<li>Reading the document/token matrix from disk in an efficient, sparse fashion.</li>
+<li>Performing test/train splits, and automatic classification tests.</li>
+  
+</ul>
 
 <p>Recursively descending directories, finding text files.
 Finding `document' boundaries when there are multiple documents per file.
