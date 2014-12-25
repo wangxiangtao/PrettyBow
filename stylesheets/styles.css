@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@font-face {
+  font-family: 'Ovo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ovo'), url(http://fonts.gstatic.com/s/ovo/v7/WqVRExPBh0NGpNgcgzBACQ.woff) format('woff');
+}
 
 body {
   background-image: url('https://raw.githubusercontent.com/wangxiangtao/PrettyMatch/master/background.jpg');
@@ -8,9 +14,10 @@ body {
         -o-background-size: cover;
         background-size: cover;
   margin:0;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#513C54;
+  font:14px/1.7 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#252125;
   font-weight:300;
+  font-family:Ovo;
 }
 
 #nav {
@@ -40,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
-  font-family:monospace;
+  font-family:Ovo;
 }
 
 h1, h2, h3 {
@@ -49,8 +56,8 @@ h1, h2, h3 {
 
 h1 {
   font-size:46px;
-  font-family:cursive;
-  font-weight:normal;
+  font-family:Ovo;
+  font-weight:bold;
 }
 
 h2 {
@@ -63,9 +70,15 @@ h3, h4, h5, h6 {
 
 a {
   color:#D75F43;
-  font-weight:400;
+  font-weight:10;
   text-decoration:none;
-  font-family:monospace;
+  font-family:Ovo;
+}
+a:hover {
+  color: #D75F43;
+  text-shadow: 0 0 0.4em #FFB, 0 0 2.8em #FFB;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a small {
